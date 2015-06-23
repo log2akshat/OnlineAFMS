@@ -1,0 +1,125 @@
+/* Sticky header-footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  line-height: 1.1 !important;
+}
+
+
+.header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+  margin-top: -19px;
+  height:70px;
+  background-image:url('../images/img01.gif');
+}
+
+.logodesc {
+  font-size:9pt;
+  padding:10px 0px 5px;
+  text-align:center;
+}
+
+.logo {
+  text-align:center;
+  margin-top: -11px;
+}
+
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 85%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  /* Set the fixed height of the footer here */
+  height: 76px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+code {
+  font-size: 80%;
+}
+
+
+.panelhead {
+  position: absolute;
+  width: 85%;
+  top: 160px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom : solid transparent;
+  border-color : #FFFFFF;
+  border-width: 0 0 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+
+	font-size: 14px !important;
+	font-weight: bold !important;
+	text-align: inherit;
+	color: #660033;
+	
+background-color:#e8e8e8;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#e8e8e8, endColorstr=#f5f5f5);
+background-image:-moz-linear-gradient(top, #e8e8e8 10%, #f5f5f5 63%);
+background-image:-webkit-linear-gradient(top, #e8e8e8 10%, #f5f5f5 63%);
+background-image:-ms-linear-gradient(top, #e8e8e8 10%, #f5f5f5 63%);
+background-image:linear-gradient(top, #e8e8e8 10%, #f5f5f5 63%);
+background-image:-o-linear-gradient(top, #e8e8e8 10%, #f5f5f5 63%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(10%,#e8e8e8), color-stop(63%,#f5f5f5));}
+
+
+}
+
+.lead {
+	font-size: 13px !important;
+	font-weight: bold !important;
+	text-align: inherit;
+	color: #660033;
+	}
+}
+
+/*----------------- Panel ---------------------- */
+.starter-template {
+  margin-top: 190px;	
+  padding: 40px 15px;
+  text-align: left;
+}
+
+.row {
+	margin-left: 0px !important;
+}

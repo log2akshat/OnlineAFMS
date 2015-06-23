@@ -1,0 +1,17 @@
+/****************************************************Button CSS**********************************************/
+/* The Apply button */
+#submit {
+	background: url(../images/Buttons/RedButton.png) no-repeat;
+	border: none;
+	float: right;
+	margin-left: 5px;
+	height: 31px;
+	width: 74px;
+	color: #fff;
+	font-size: small;
+}
+
+#submit:hover
+  { 
+    background: url(../images/Buttons/BlueButton.png) no-repeat;
+  }

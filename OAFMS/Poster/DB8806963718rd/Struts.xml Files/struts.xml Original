@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+<constant name="struts.devMode" value="false" />
+<constant name="struts.action.extension" value="ncra"></constant>
+<include file="struts-default.xml"/> 
+
+<package name="INAT2015" namespace="" extends="struts-default">
+
+<result-types>
+	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+</result-types>
+ 		
+<action name="welcome">
+	<result name="success" type="tiles">welcome</result>
+</action>
+
+<action name="FAQs">
+	<result name="success" type="tiles">FAQs</result>
+</action>
+
+<!-- BEFORE THE DEADLINE --> 
+<action name="ApplyOnline">
+	<result name="success" type="tiles">ApplyOnline</result>
+</action>
+
+<action name="Guidelines">
+	<result name="success" type="tiles">Guidelines</result>
+</action>
+
+<action name="Registration" method="input">
+	<result name="input" type="tiles">Register</result>
+</action>
+
+<action name="Register" class="net.candidate.registration.controller.RegisterAction" method="add">
+	<result name="input" type="tiles">ApplyOnline</result>
+	<result name="error" type="tiles">ApplyOnline</result>
+	<result name="success" type="tiles">RegisterSuccess</result>
+</action>
+
+<!-- AFTER THE DEADLINE --> 
+<!--
+<action name="ApplyOnline">
+	<result name="success" type="tiles">RegOver</result>
+</action>
+-->
+
+<!-- BEFORE THE DEADLINE --> 
+<action name="Apply">
+	<result name="success" type="tiles">Apply</result>
+</action>
+
+<!-- AFTER THE DEADLINE --> 
+<!--
+<action name="Apply">
+	<result name="success" type="tiles">Deadline</result>
+</action> 
+-->
+
+<!-- BEFORE THE DEADLINE -->
+<action name="ApplyOL" class="net.candidate.application.ApplyAction">
+	<result name="input" type="tiles">Apply</result>
+	<result name="error" type="tiles">Apply</result>
+	<result name="success" type="tiles">OLAppForm</result>
+</action>
+
+<!-- AFTER THE DEADLINE -->
+<!--
+<action name="ApplyOL">
+	<result name="input" type="tiles">Deadline</result>
+	<result name="error" type="tiles">Deadline</result>
+	<result name="success" type="tiles">Deadline</result>
+</action> 
+-->
+
+<action name="Submitappform" class="net.candidate.application.action.AppFormAction">
+	<result name="input" type="tiles">Apply</result>
+	<result name="error" type="tiles">Apply</result>
+	<result name="success" type="tiles">AppFormSubmitSuccess</result>
+</action>
+
+<action name="sendpassword">
+	<result name="success" type="tiles">ForgetPasswd</result>
+</action>
+
+<action name="sendapppassword" class="net.candidate.application.action.ForgetPasswd">
+	<result name="input" type="tiles">ForgetPasswd</result>
+	<result name="error" type="tiles">ForgetPasswd</result>
+	<result name="success" type="tiles">ForgetPasswd</result>
+</action>
+
+<!-- BEFORE THE DEADLINE -->
+<action name="RefApply">
+<result name="success" type="tiles">RefApply</result>
+</action>
+
+<action name="RefApplyOL" class="net.candidate.referee.RefereeApplyAction">
+	<result name="input" type="tiles">RefApply</result>
+	<result name="error" type="tiles">RefApply</result>
+	<result name="success" type="tiles">AssessmentForm</result>
+</action>
+
+<action name="SubmitRefereeform" class="net.candidate.referee.action.Refform">
+	<result name="input" type="redirect">RefApply.ncra</result>
+	<result name="error" type="tiles">AssessmentForm</result>
+	<result name="success" type="tiles">RefereeFormSubmitSuccess</result>
+</action>
+
+<!-- AFTER THE DEADLINE -->
+<!-- 
+<action name="RefApply">
+<result name="success" type="tiles">RefApplyOver</result>
+</action> 
+-->
+
+<action name="Login">
+	<result name="success" type="tiles">CandLogin</result>
+</action>
+  
+  <action name="CandLogin" class="net.candidate.login.action.LoginAction" >
+	<result name="input" type="tiles">CandLogin</result>
+	<result name="login" type="tiles">CandLogin</result>     
+    <result name="success" type="tiles">CandidateAccount</result>   
+</action>
+
+  <action name="CandHome" class="net.candidate.login.action.HomeAction" >
+	<result name="input" type="tiles">CandLogin</result>
+	<result name="login" type="tiles">CandLogin</result>     
+    <result name="success" type="tiles">CandidateAccount</result>   
+</action>
+ 
+   <action name="ProfileView" class="net.candidate.login.action.ViewProfile" >
+	<result name="input" type="tiles">CandLogin</result>
+	<result name="login" type="tiles">CandLogin</result>     
+    <result name="success" type="tiles">CandProfileView</result>   
+</action>
+
+<!-- BEFORE THE DEADLINE --> 
+   <action name="UpdateProfile" class="net.candidate.login.action.ViewProfile" >
+	<result name="input" type="tiles">CandLogin</result>
+	<result name="login" type="tiles">CandLogin</result>     
+    <result name="success" type="tiles">CandUpdateProfile</result>   
+</action>
+
+<action name="CandUpdateform" class="net.candidate.login.action.UpdateAppFormAction">
+	<result name="input" type="tiles">UpdateProfile</result>
+	<result name="error" type="tiles">UpdateProfile</result>
+	<result name="success" type="redirect">ProfileView.ncra</result>
+</action>
+
+<!-- AFTER THE DEADLINE -->
+<!--
+<action name="UpdateProfile" class="net.candidate.login.action.ViewProfile" >
+	<result name="input" type="tiles">CandLogin</result>
+	<result name="login" type="tiles">CandLogin</result>     
+    <result name="success" type="tiles">CandDeadline</result>   
+</action>
+-->
+<action name="1stReferee" class="net.candidate.login.action.ViewProfile">
+	<result name="success" type="tiles">Ref1Passwd</result>
+</action>
+
+<action name="Referee1Password" class="net.candidate.login.action.Ref1Passwd">
+	<result name="input" type="tiles">Ref1Passwd</result>
+	<result name="login" type="tiles">Ref1Passwd</result>
+	<result name="success" type="tiles">Ref1Passwd</result>
+</action>
+
+<action name="2ndReferee" class="net.candidate.login.action.ViewProfile">
+	<result name="success" type="tiles">Ref2Passwd</result>
+</action>
+
+<action name="Referee2Password" class="net.candidate.login.action.Ref2Passwd">
+	<result name="input" type="tiles">Ref2Passwd</result>
+	<result name="login" type="tiles">Ref2Passwd</result>
+	<result name="success" type="tiles">Ref2Passwd</result>
+</action>
+
+<action name="ResetPasswd" class="net.candidate.login.action.ChangePasswordAction">
+	<result name="input" type="tiles">CandChangePasswd</result>
+	<result name="login" type="tiles">CandChangePasswd</result>
+	<result name="success" type="tiles">CandChangePasswd</result>
+</action>
+
+<action name="logoutAction" class="net.candidate.login.action.LogoutAction">
+    <result name="success" type="tiles">CandLogin</result>
+</action>
+
+<action name="Poster">
+	<result name="success">/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/Poster.jsp</result>
+</action>
+
+<action name="ImpDates">
+<result name="success" type="tiles">ImpDates</result>
+</action>
+
+<!-- Admin Section Begins -->
+
+<action name="admin">
+	  <result name="success" type="tiles">adminLogin</result>   
+</action>
+
+  <action name="adminLogin" class="net.admin.login.action.LoginAction" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">adminAccount</result>   
+</action>
+
+ <action name="adminHome" class="net.admin.login.action.StatsAction" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">adminAccount</result>   
+</action>
+
+<!-- Candidate Profile View -->
+
+<action name="adminProfileViewLogin" class="net.admin.login.action.HomeAction" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">adminProfileViewLogin</result>   
+</action>
+
+<action name="Candselectform" class="net.admin.login.action.SelectionUpdate" >
+	<result name="error" type="tiles">adminCandProfileView</result>
+	<result name="success" type="tiles">OFDRRedirect</result>    
+</action>
+
+<action name="OFDRProcess" class="net.admin.login.action.ViewProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminProfileViewLogin</result>     
+    <result name="success" type="tiles">adminCandProfileView</result>   
+</action>
+
+<!-- Candidate Profile Update -->
+
+<action name="adminProfileUpdateLogin" class="net.admin.login.action.HomeAction" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">adminProfileUpdateLogin</result>   
+</action>
+
+<action name="UpdateProcess" class="net.admin.login.action.ViewProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminProfileUpdateLogin</result>     
+    <result name="success" type="tiles">adminCandProfileUpdate</result>   
+</action>
+
+<action name="adminCandUpdateform" class="net.admin.login.action.UpdateAppFormAction">
+	<result name="input" type="tiles">adminProfileUpdateLogin</result>
+	<result name="error" type="tiles">adminProfileUpdateLogin</result>
+	<result name="success" type="tiles">OFDRRedirect</result>
+</action>
+
+<!-- Referee Profile View -->
+
+<action name="RefereeProfileLogin" class="net.admin.login.action.HomeAction" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">RefereeProfileLogin</result>   
+</action>
+
+<action name="AFDRProcess" class="net.admin.login.action.ViewRefereeProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">RefereeProfileLogin</result>     
+    <result name="success" type="tiles">RefereeProfileView</result>   
+</action>
+
+<!-- Password Sending Mechanism | Password to Applicant -->
+
+<action name="SendAppPasswd" class="net.admin.login.action.password.AppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SendAppPasswd</result>   
+</action>
+
+<action name="appPasswdProcess" class="net.admin.login.action.password.PreviewAppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">SendAppPasswd</result>     
+    <result name="success" type="tiles">PreviewAppPasswd</result>   
+</action>
+
+<action name="SendappPasswdFinal" class="net.admin.login.action.password.SendAppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">PreviewAppPasswd</result>     
+    <result name="success" type="tiles">PreviewAppPasswd</result>   
+</action>
+
+<!-- Password Sending Mechanism | Password to 1st Referee -->
+
+<action name="SendRef1Passwd" class="net.admin.login.action.password.AppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SendRef1Passwd</result>   
+</action>
+
+<action name="Ref1PasswdProcess" class="net.admin.login.action.password.PreviewAppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">SendRef1Passwd</result>     
+    <result name="success" type="tiles">PreviewRef1Passwd</result>   
+</action>
+
+<action name="SendRef1PasswdFinal" class="net.admin.login.action.password.SendRef1Passwd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">PreviewRef1Passwd</result>     
+    <result name="success" type="tiles">PreviewRef1Passwd</result>   
+</action>
+
+<!-- Password Sending Mechanism | Password to 2nd Referee -->
+
+<action name="SendRef2Passwd" class="net.admin.login.action.password.AppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SendRef2Passwd</result>   
+</action>
+
+<action name="Ref2PasswdProcess" class="net.admin.login.action.password.PreviewAppPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">SendRef2Passwd</result>     
+    <result name="success" type="tiles">PreviewRef2Passwd</result>   
+</action>
+
+<action name="SendRef2PasswdFinal" class="net.admin.login.action.password.SendRef2Passwd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">PreviewRef2Passwd</result>     
+    <result name="success" type="tiles">PreviewRef2Passwd</result>   
+</action>
+
+<action name="CandCombReport" class="net.admin.login.action.ViewCombProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">CandCombProfile</result>   
+</action>
+
+<action name="multiselect">
+	<result name="error" type="tiles">adminLogin</result>
+	<result name="success">/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/controllerjsps/multiselect.jsp</result>    
+</action>
+
+<action name="RefCombReport" class="net.admin.login.action.ViewCombProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">RefCombProfile</result>   
+</action>
+
+<action name="appselection" class="net.admin.login.action.ViewCombProfile">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">CandSelProfile</result>
+</action>
+
+<action name="selected" class="net.admin.login.action.ViewSelCand">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SelectedCandidates</result>
+</action>
+
+<action name="multimail" class="net.admin.login.action.multimail">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SelectedRedirect</result>
+</action>
+
+<action name="rejectedmultimail" class="net.admin.login.action.rejectedmultimail">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">RejectRedirect</result>
+</action>
+
+<!-- Admin Section : List of Waiting Candidates -->
+<action name="Waiting" class="net.admin.login.action.ViewWaitingCand">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">WaitingCandidates</result>
+</action>
+
+<action name="SelectWaiting" class="net.admin.login.action.SelectWaiting" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">WaitingRedirect</result>
+</action>
+
+<action name="RejectWaiting" class="net.admin.login.action.RejectWaiting" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">WaitingRedirect</result>
+</action>
+
+<!-- Admin Section : List of Rejected Candidates -->
+<action name="Rejected" class="net.admin.login.action.ViewRejectedCand">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">RejectedCandidates</result>
+</action>
+
+<action name="WaitingReject" class="net.admin.login.action.WaitingReject" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">RejectRedirect</result>
+</action>
+
+<!-- Admin Section : Screening Committee Invitation -->
+<action name="SCInvitation" class="net.admin.login.action.committee.SCHomeAction" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCInvitation</result>
+</action>
+
+<action name="SCInvitationProcess" class="net.admin.login.action.committee.SCInvitation" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">SCInvitation</result>     
+    <result name="success" type="tiles">SCInvitation</result>
+</action>
+
+<action name="ExcelPreview">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">ExcelFormat</result>
+</action>
+
+<action name="Excel" class="net.admin.login.action.Excel">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">ExcelFormat</result>
+</action>
+
+<!-- Screening Committee Password Sending Mechanism | Password to Screening Committee Member -->
+
+<action name="SCPasswd" class="net.admin.login.action.committee.SCPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SendSCPasswd</result>   
+</action>
+
+<action name="SCPasswdProcess" class="net.admin.login.action.committee.PreviewSCPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">SendSCPasswd</result>     
+    <result name="success" type="tiles">PreviewSCPasswd</result>   
+</action>
+
+<action name="SendSCPasswdFinal" class="net.admin.login.action.committee.SendSCPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">PreviewSCPasswd</result>     
+    <result name="success" type="tiles">PreviewSCPasswd</result>   
+</action>
+
+<!-- Screening Committee | View Profile of Screening Committee Member -->
+
+<action name="SCProfile" class="net.admin.login.action.committee.SCPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCProfileAccess</result>   
+</action>
+
+<action name="SCProfileProcess" class="net.admin.login.action.committee.SCProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCProfile</result>   
+</action>
+
+<!-- Screening Committee | Update Profile of Screening Committee Member -->
+
+<action name="SCUpdateProfile" class="net.admin.login.action.committee.SCPasswd" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCProfileUpdateAccess</result>   
+</action>
+
+<action name="SCProfileUpdateProcess" class="net.admin.login.action.committee.SCProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCProfileUpdateProcess</result>   
+</action>
+
+<action name="SCUpdateFinal" class="net.admin.login.action.committee.SCUpdateProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCProfileRedirect</result>
+</action>
+
+<!-- Screening Committee | List of Screening Committee Members -->
+<action name="SCommittee" class="net.admin.login.action.committee.SCommittee" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCommittee</result>
+</action>
+
+<action name="SCDeleteAccount" class="net.admin.login.action.committee.SCDeleteProfile" >
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">SCProfileRedirect</result>
+</action>
+
+<!-- Admin Password Reset -->
+<action name="adminResetPasswd" class="net.admin.login.action.HomeAction">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="success" type="tiles">adminChangePasswd</result>
+</action>
+
+<action name="adminChangePasswd" class="net.admin.login.action.ResetPasswd">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="success" type="tiles">adminChangePasswd</result>
+</action>
+
+<!-- Admin Section : Print Call Letters Selected Candidates -->
+<action name="CallLetters" class="net.admin.login.action.ViewPrintCand">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">CallLetters</result>
+</action>
+
+<action name="PrintCallLetters" class="net.admin.login.action.PrintCallLetters">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">CallLettersRedirect</result>
+</action>
+
+<!-- Admin Section : Zero Referee Reports Received of the Candidates -->
+<action name="zeroreport" class="net.admin.login.action.ViewZeroReport">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">ZeroReport</result>
+</action>
+
+<action name="ZeroReportReminder" class="net.admin.login.action.ZeroReportReminder">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">ZeroReportRedirect</result>
+</action>
+
+<!-- Admin Section : One Referee Report Received of the Candidates -->
+<action name="onereport" class="net.admin.login.action.ViewOneReport">
+	<result name="input" type="tiles">adminLogin</result>
+	<result name="login" type="tiles">adminLogin</result>
+	<result name="error" type="tiles">adminLogin</result>     
+    <result name="success" type="tiles">OneReport</result>
+</action>
+
+<action name="adminlogoutAction" class="net.admin.login.action.LogoutAction">
+    <result name="success" type="tiles">adminLogin</result>
+</action>
+
+<!-- Screening Committee Section Begins -->
+
+<action name="SClogin">
+	  <result name="success" type="tiles">SCLogin</result>   
+</action>
+
+  <action name="SCLogin" class="net.admin.login.action.LoginAction" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCAccount</result>   
+</action>
+
+ <action name="SCHome" class="net.admin.login.action.StatsAction" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCAccount</result>   
+</action>
+
+<!-- Screening Committee Profile View -->
+
+<action name="SCProfileViewLogin" class="net.admin.login.action.HomeAction" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCProfileViewLogin</result>   
+</action>
+
+<action name="SCCandselectform" class="net.admin.login.action.SelectionUpdate" >
+	<result name="error" type="tiles">SCCandProfileView</result>
+	<result name="success" type="tiles">SCOFDRRedirect</result>    
+</action>
+
+<action name="SCOFDRProcess" class="net.admin.login.action.ViewProfile" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCProfileViewLogin</result>     
+    <result name="success" type="tiles">SCCandProfileView</result>   
+</action>
+
+<!-- Screening Committee Referee Profile View -->
+
+<action name="SCRefereeProfileLogin" class="net.admin.login.action.HomeAction" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCRefereeProfileLogin</result>   
+</action>
+
+<action name="SCAFDRProcess" class="net.admin.login.action.ViewRefereeProfile" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCRefereeProfileLogin</result>     
+    <result name="success" type="tiles">SCRefereeProfileView</result>   
+</action>
+
+<action name="SCappselection" class="net.admin.login.action.ViewCombProfile">
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCCandSelProfile</result>
+</action>
+
+<action name="SCmultiselect">
+	<result name="error" type="tiles">adminLogin</result>
+	<result name="success">/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/controllerjsps/multiselect.jsp</result>    
+</action>
+
+<action name="SCCandCombReport" class="net.admin.login.action.ViewCombProfile" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCCandCombProfile</result>   
+</action>
+
+<action name="SCRefCombReport" class="net.admin.login.action.ViewCombProfile" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCRefCombProfile</result>   
+</action>
+
+<!-- Screening Committee : List of Selected Candidates -->
+<action name="SCselected" class="net.admin.login.action.ViewSCSelCand">
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCSelectedCandidates</result>
+</action>
+
+<!-- Screening Committee : List of Waiting Candidates -->
+<action name="SCWaiting" class="net.admin.login.action.ViewWaitingCand">
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCWaitingCandidates</result>
+</action>
+
+<action name="SCSelectWaiting" class="net.admin.login.action.SelectWaiting" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCWaitingRedirect</result>
+</action>
+
+<action name="SCRejectWaiting" class="net.admin.login.action.RejectWaiting" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCWaitingRedirect</result>
+</action>
+
+<!-- Screening Committee : List of Rejected Candidates -->
+<action name="SCRejected" class="net.admin.login.action.ViewRejectedCand">
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCRejectedCandidates</result>
+</action>
+
+<action name="SCWaitingReject" class="net.admin.login.action.WaitingReject" >
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="error" type="tiles">SCLogin</result>     
+    <result name="success" type="tiles">SCRejectRedirect</result>
+</action>
+
+<!-- Screening Committee Password Reset -->
+<action name="SCResetPassword" class="net.admin.login.action.HomeAction">
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="success" type="tiles">SComChangePasswd</result>
+</action>
+
+<action name="SCChangePasswd" class="net.admin.login.action.SCResetPasswd">
+	<result name="input" type="tiles">SCLogin</result>
+	<result name="login" type="tiles">SCLogin</result>
+	<result name="success" type="tiles">SComChangePasswd</result>
+</action>
+
+<action name="SClogoutAction" class="net.admin.login.action.LogoutAction">
+    <result name="success" type="tiles">SCLogin</result>
+</action>
+
+<action name="d4jf7wyr9">
+	<result name="success" type="tiles">download</result>
+</action>
+
+<!-- Add actions here -->
+</package>
+
+
+<!-- Add packages here -->
+
+</struts>

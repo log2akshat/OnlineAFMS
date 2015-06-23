@@ -1,0 +1,75 @@
+body  {
+	background-image:url('images/img01.gif');
+	background-repeat:repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #6E6E6E;
+}
+
+input, textarea {
+	background: #FFFFFF url('images/img09.gif');
+	background-repeat:repeat-x;
+	border: 1px solid #FFFFFF;
+	border-top-color: #A3A3A3;
+	border-left-color: #D6D6D6;
+	font: normal 1em/normal "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #250517;
+}
+
+/* Page */
+
+#page {
+	width: 900px;
+	margin: 0 auto;
+	padding: 40px 35px 20px 25px;
+	background-image:url('images/img05.gif') ;
+}
+
+#footer {
+	clear: both;
+	width: 870px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 35px 45px;
+	background: url(images/img05.gif) no-repeat;
+}
+
+#footer p {
+	margin: 0;
+	line-height: normal;
+	color: #B4B4B4;
+}
+
+#footer a {
+	color: #B4B4B4;
+}
+
+#footer .legal {
+	float: left;
+}
+
+#footer .credit {
+	float: right;
+}
+
+/* Panel on the index.jsp Page */
+#indexpanel {
+        width:22%;
+        height: 197px;
+        margin: 0px 0 -10px 0;
+        margin-left: -15px;
+        padding: 15px 0 0 20px;
+        background: url(images/img07.gif) no-repeat;
+        line-height: normal;
+        color: #333;
+}
+
+.lp {
+width:100%;
+text-decoration:none;
+padding:0px;
+margin:-50px;
+padding-left: 10px;
+float:10px;
+padding-top:5px;
+}

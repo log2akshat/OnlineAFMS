@@ -1,0 +1,258 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image:url('../images/img01.gif');
+	background-repeat:repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #6E6E6E;
+}
+
+/*
+input, textarea {
+	background: #FFFFFF url(../images/img09.gif) repeat-x;
+	border: 1px solid #FFFFFF;
+	border-left-color: #D6D6D6;
+	font: normal 1em/normal "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #250517;
+}
+*/
+
+h1, h2, h3 {
+	margin-bottom: 17em;
+	letter-spacing: -0.05em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1, h1 a, h2, h2 a {
+	text-decoration: none;
+	color: #414141;
+}
+
+h1 a:hover, h2 a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 38px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: normal;
+	color: #939292;
+}
+
+p, ul, ol {
+	margin-top: 0.7em;
+	line-height: 150%;
+}
+
+ul, ol {
+	margin-left: 3em;
+}
+
+blockquote {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+a {
+	color: #346086;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 20px;
+}
+
+img.right {
+	float: right;
+	margin-right: 20px;
+}
+
+hr {
+	display: none;
+}
+
+/* NCRA Logo */
+
+#logo {
+	width: 900px;
+	height: 115px;
+	margin: 0 auto;
+}
+
+
+#logo h1 {
+	float: left;
+	padding-top: 0px;
+}
+
+#logo h2 {
+	float: right;
+	padding-top: 0px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+
+/* Page */
+
+#page {
+	width: 900px;
+	margin: 0 auto;
+	padding: 40px 35px 20px 25px;
+	background: url(../images/img05.gif) no-repeat;
+}
+
+#footer {
+	clear: both;
+	width: 870px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 35px 45px;
+	background: url(../images/img05.gif) no-repeat;
+}
+
+#footer p {
+	margin: 0;
+	line-height: normal;
+	color: #B4B4B4;
+}
+
+#footer a {
+	color: #B4B4B4;
+}
+
+#footer .legal {
+	float: left;
+}
+
+#footer .credit {
+	float: right;
+}
+
+/* Panel on the index.jsp Page */
+#indexpanel {
+        width:116%;
+        height: 250px;
+        margin: 0px 0 -10px 0;
+        margin-left: -15px;
+        padding: 15px 0 0 20px;
+        background: url(../images/img007.gif) no-repeat;
+        line-height: normal;
+        color: #333;
+}
+
+#indexpanel_side {
+        width:22%;
+        height: 250px;
+        margin: 0px 0 -10px 0;
+        margin-left: -15px;
+        padding: 15px 0 0 20px;
+        background: url(../images/img007.gif) no-repeat;
+        line-height: normal;
+        color: #333;
+}
+
+.lp_link {
+width:120%;
+left:-20px;
+text-decoration:none;
+padding:0px;
+margin:-4px;
+padding-left: 10px;
+float:0px;
+padding-top:3px;
+}
+
+#content {
+	float: left;
+	width: 725px;
+}
+
+.post {
+margin-left: -100px;
+}
+
+.post_submenu {
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-right: 650px;
+}
+
+.post .title {
+	margin: 0;
+	padding: 0 20px;
+}
+
+.post .entry {
+	padding: 0 -20px;
+}
+
+.post .entry_candlogin {
+	margin-top: -295px;
+	margin-left: 220px;
+	padding: 0 -20px;
+}
+
+.post .meta {
+	height: 47px;
+	margin: 20px 0 40px 0;
+	padding: 15px 0 0 20px;
+	background: url(../images/img07.gif) no-repeat;
+	line-height: normal;
+}
+
+#index {
+        width: 890px;
+        font-size: 15px;
+        margin: -500px 0 0px 0;
+        margin-left: 0px;
+        padding: 45px 35px 15px 25px;
+        background: url(../images/imgm05.gif) no-repeat;
+}
+
+#heading {
+		  margin: -240px 0 0px 0;
+          padding: 45px 0px 0px 25px;
+}
+
+/* Login Pages Welcome Note Heading */
+#heading_login {
+		color: #660033;
+		font-weight: bold;
+		font-size: 24px;
+		margin-top: -247px;
+		margin-left: -100px;
+        padding: 45px 0px 0px 25px;
+}
+
+#index_below {
+        width: 940px;
+        font-size: 15px;
+        margin: -50px 0 0px 0;
+        margin-left: -15px;
+        padding: 45px 35px 15px 25px;
+        background: url(../images/imgm05.gif) no-repeat;
+}

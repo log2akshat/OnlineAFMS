@@ -1,0 +1,184 @@
+<project name="INAT2015" basedir="../" default="all">
+    <!-- Project settings -->
+    <property name="project.title" value="IUCAA NCRA Admission Test"/>
+	<property name="project.jar.file" value="INAT2015.jar"/>
+
+	  <path id="class.path">
+		<fileset dir="lib">
+		  <include name="**/*.jar"/>
+		</fileset>
+
+		<fileset dir="libext">
+		  <include name="**/*.jar"/>
+		</fileset>
+	  </path>
+
+		<!-- Classpath for Project -->
+
+		<path id="compile.classpath">
+			<pathelement path ="lib/commons-beanutils-1.8.0.jar"/>
+			<pathelement path ="lib/commons-collections-3.1.jar"/>
+			<pathelement path ="lib/commons-digester-1.8.1.jar"/>
+			<pathelement path ="lib/commons-fileupload-1.2.1.jar"/>
+			<pathelement path ="lib/commons-io-1.3.2.jar"/>
+			<pathelement path ="lib/commons-lang-2.3.jar"/>
+			<pathelement path ="lib/commons-logging-1.1.jar"/>
+			<pathelement path ="lib/freemarker-2.3.13.jar"/>
+			<pathelement path ="lib/junit-3.8.1.jar"/>
+			<pathelement path ="lib/javassist.jar"/>
+			<pathelement path ="lib/log4j-1.2.15.jar"/>
+			<pathelement path ="lib/ognl-2.6.11.jar"/>
+			<pathelement path ="lib/struts2-convention-plugin-2.1.6.jar"/>
+			<pathelement path ="lib/struts2-core-2.1.6.jar"/>
+			<pathelement path ="lib/struts2-jquery-plugin-2.5.3.jar"/>
+			<pathelement path ="lib/struts2-tiles-plugin-2.1.6.jar"/>
+			<pathelement path ="lib/tiles-api-2.1.2.jar"/>
+			<pathelement path ="lib/tiles-compat-2.1.2.jar"/>
+			<pathelement path ="lib/tiles-core-2.1.2.jar"/>
+			<pathelement path ="lib/tiles-jsp-2.1.2.jar"/>
+			<pathelement path ="lib/tiles-servlet-2.1.2.jar"/>
+			<pathelement path ="lib/xwork-2.1.2.jar"/>
+			<pathelement path ="lib/struts2-dojo-plugin-2.1.6.jar"/>
+			<pathelement path ="lib/itextpdf-5.1.2.jar"/>
+			<pathelement path ="libext/servlet-api.jar"/>
+			<pathelement path ="libext/catalina-ant.jar"/>
+			<pathelement path ="libext/mail.jar"/>
+			<pathelement path ="libext/SendMail.jar"/>
+			<pathelement path ="libext/activation.jar"/>
+			<pathelement path ="libext/iText-5.0.4.jar"/>
+			<pathelement path ="libext/mysql-connector-java-5.1.6-bin.jar"/>
+			<pathelement path ="libext/lib/antlr-2.7.2.jar"/>
+			<pathelement path ="libext/lib/aopalliance-1.0.jar"/>
+			<pathelement path ="libext/lib/classworlds-1.1.jar"/>
+			<pathelement path ="libext/lib/commons-chain-1.1.jar"/>
+			<pathelement path ="libext/lib/commons-codec-1.3.jar"/>
+			<pathelement path ="libext/lib/commons-el-1.0.jar"/>
+			<pathelement path ="libext/lib/commons-logging-api-1.1.jar"/>
+			<pathelement path ="libext/lib/commons-validator-1.3.0.jar"/>
+			<pathelement path ="libext/lib/dwr-1.1-beta-3.jar"/>
+			<pathelement path ="libext/lib/jstl-1.1.0.jar"/>
+			<pathelement path ="libext/lib/myfaces-api-1.1.2.jar"/>
+			<pathelement path ="libext/lib/myfaces-impl-1.1.2.jar"/>
+			<pathelement path ="libext/lib/oro-2.0.8.jar"/>
+			<pathelement path ="libext/lib/plexus-container-default-1.0-alpha-10.jar"/>
+			<pathelement path ="libext/lib/plexus-utils-1.2.jar"/>
+			<pathelement path ="libext/lib/sitemesh-2.2.1.jar"/>
+			<pathelement path ="libext/lib/spring-beans-2.0.5.jar"/>
+			<pathelement path ="libext/lib/spring-context-2.0.5.jar"/>
+			<pathelement path ="libext/lib/spring-core-2.0.5.jar"/>
+			<pathelement path ="libext/lib/spring-web-2.0.5.jar"/>
+			<pathelement path ="libext/lib/struts2-codebehind-plugin-2.0.14.jar"/>
+			<pathelement path ="libext/lib/struts2-config-browser-plugin-2.0.14.jar"/>
+			<pathelement path ="libext/lib/struts2-jsf-plugin-2.0.14.jar"/>
+			<pathelement path ="libext/lib/struts2-sitemesh-plugin-2.0.14.jar"/>
+			<pathelement path ="libext/lib/struts2-struts1-plugin-2.0.14.jar"/>
+			<pathelement path ="libext/lib/struts-core-1.3.5.jar"/>
+			<pathelement path ="libext/lib/velocity-1.4.jar"/>
+			<pathelement path ="libext/lib/velocity-dep-1.4.jar"/>
+			<pathelement path ="libext/lib/velocity-tools-1.1.jar"/>
+			<pathelement path ="libext/lib/xml-apis-1.0.b2.jar"/>
+			<pathelement path ="lib/shiro-web-1.1.0.jar"/>
+			<pathelement path ="classes"/>
+			<pathelement path ="${classpath}"/>
+		</path>
+
+		<!-- Check timestamp on files -->
+
+		<target name="prepare">
+			<tstamp/>
+			<copy
+				file="src/struts.xml"
+				todir="src/classes"/>
+		</target>
+
+		<!-- Copy any resource or configuration files -->
+
+		<target name="resources">
+			<copy todir="src/classes" includeEmptyDirs="no">
+				<fileset dir="src/java">
+				<patternset>
+					<include name="**/*.conf"/>
+					<include name="**/*.properties"/>
+					<include name="**/*.xml"/>
+					<include name="**/*.css"/>
+					<include name="**/*.js"/>
+					<include name="**/*.ftl"/>
+				</patternset>
+				</fileset>
+			</copy>
+		</target>
+
+		<!-- Normal build of application -->
+
+		<target name="compile" depends="prepare,resources">
+			<javac srcdir="src" destdir="src/classes" 
+                         debug="true" debuglevel="lines,vars,source">
+				<classpath refid="class.path"/>
+			</javac>
+
+			<jar
+			jarfile="lib/${project.jar.file}"
+			basedir="src/classes"/>
+		</target>
+
+		<!-- Remove classes directory for clean build -->
+
+		<target name="clean"
+		  description="Prepare for clean build">
+		  <delete dir="classes"/>
+		  <mkdir  dir="classes"/>
+		</target>
+
+		<!-- Build Javadoc documentation -->
+
+		<target name="javadoc"
+		 description="Generate JavaDoc API docs">
+			<delete dir="./doc/api"/>
+			<mkdir dir="./doc/api"/>
+			<javadoc sourcepath="./src/java"
+				destdir="./doc/api"
+				classpath="${servlet.jar}:${jdbc20ext.jar}"
+				packagenames="*"
+				author="true"
+				private="true"
+				version="true"
+				windowtitle="${project.title} API Documentation"
+				doctitle="&lt;h1&gt;${project.title}
+                          Documentation (Version ${project.version})&lt;/h1&gt;"
+				bottom="Copyright &#169; 2002">
+				<classpath refid="compile.classpath"/>
+			</javadoc>
+		</target>
+
+		<!-- Build entire project -->
+
+		<target name="project" depends="clean,prepare,compile"/>
+
+		<!-- Create binary distribution -->
+
+		<target name="dist"
+			description="Create binary distribution">
+		  <mkdir
+			dir="${distpath.project}"/>
+
+		  <jar
+			jarfile="${distpath.project}/${project.distname}.jar"
+			basedir="./classes"/>
+
+		  <copy
+			file="${distpath.project}/${project.distname}.jar"
+			todir="${distpath.project}"/>   
+
+		  <war
+			basedir="../"
+			warfile="${distpath.project}/${project.distname}.war"
+			webxml="web.xml">
+			<exclude name="${distpath.project}/${project.distname}.war"/>
+		   </war>
+    </target>
+
+
+    <!-- Build project and create distribution-->
+
+	<target name="all" depends="project"/>
+        </project>

@@ -1,0 +1,173 @@
+// Assessment Form JavaScript
+
+function clearForms()
+{
+  var i;
+  for (i = 0; (i < document.forms.length); i++) {
+    document.forms[i].reset();
+  }
+}
+
+function disableGraderepifnot(form)
+{
+if(document.getElementById('SubmitRefereeform_Grades').value != "Yes")
+{
+	((document.getElementById('SubmitRefereeform_Gradesifno').readOnly = false) &&
+			(document.getElementById('SubmitRefereeform_Gradesifno').value = ""));
+}
+else
+{
+	((document.getElementById('SubmitRefereeform_Gradesifno').readOnly = true) &&
+			(document.getElementById('SubmitRefereeform_Gradesifno').value = "Not applicable!"));
+}
+}
+
+var characters1 = "500";
+var characters2 = "1000";
+var characters3 = "1500";
+var characters4 = "100";
+
+//Knowing Words Typing Restriction
+function charrestrictionKnowing(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Knowing').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	            
+	if (strCounter.length > 100) 
+	            {
+	            strval = strval.substring(0,characters2);
+				document.getElementById('SubmitRefereeform_Knowing').value = strval;
+				document.getElementById('SubmitRefereeform_Knowing').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('100WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }     
+		        return true;
+	        }
+	
+
+//Strength Words Typing Restriction
+function charrestrictionStrength(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Strength').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 150) 
+	            {
+				strval = strval.substring(0,characters3);
+				document.getElementById('SubmitRefereeform_Strength').value = strval;
+				document.getElementById('SubmitRefereeform_Strength').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('150WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }
+
+//Weaknesses Words Typing Restriction
+function charrestrictionWeaknesses(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Weaknesses').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 150) 
+	            {
+				strval = strval.substring(0,characters3);
+				document.getElementById('SubmitRefereeform_Weaknesses').value = strval;
+				document.getElementById('SubmitRefereeform_Weaknesses').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('150WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }
+
+//Recommending Words Typing Restriction
+function charrestrictionRecommending(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Recommending').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 20) 
+	            {
+				strval = strval.substring(0,characters4);
+				document.getElementById('SubmitRefereeform_Recommending').value = strval;
+				document.getElementById('SubmitRefereeform_Recommending').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('20WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }
+
+//Gradesifno Words Typing Restriction
+function charrestrictionGradesifno(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Gradesifno').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 100) 
+	            {
+				strval = strval.substring(0,characters2);
+				document.getElementById('SubmitRefereeform_Gradesifno').value = strval;
+				document.getElementById('SubmitRefereeform_Gradesifno').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('100WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }
+
+//Interest Words Typing Restriction
+function charrestrictionInterest(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Interest').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 50) 
+	            {
+				strval = strval.substring(0,characters1);
+				document.getElementById('SubmitRefereeform_Interest').value = strval;
+				document.getElementById('SubmitRefereeform_Interest').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('50WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }
+
+//Excc Words Typing Restriction
+function charrestrictionExcc(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Excc').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 100) 
+	            {
+				strval = strval.substring(0,characters2);
+				document.getElementById('SubmitRefereeform_Excc').value = strval;
+				document.getElementById('SubmitRefereeform_Excc').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('100WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }
+
+//Summary Words Typing Restriction
+function charrestrictionSummary(){
+	var gt = new Gettext({ 'domain' : 'messages' });
+	var strval = document.getElementById('SubmitRefereeform_Summary').value;
+	var strCounter = strval.split(" ");
+	            var strCounterLength = strCounter.length - 1;
+	           
+	if (strCounter.length > 20) 
+	            {
+				strval = strval.substring(0,characters4);
+				document.getElementById('SubmitRefereeform_Summary').value = strval;
+				document.getElementById('SubmitRefereeform_Summary').focus();
+				alert((gt.gettext('Error')).concat("\n\n").concat(gt.gettext('20WordsLimit')).concat("\n\n").concat(gt.gettext('Trim')));
+				return false;
+	            }
+		        return true;
+	        }

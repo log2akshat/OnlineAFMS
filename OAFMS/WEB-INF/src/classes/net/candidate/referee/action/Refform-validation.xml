@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+       "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+       
+<validators>
+       
+       <field name="Candname">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Candname"/>
+        </field-validator>
+     </field>
+     
+     <field name="Knowing">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Mandatory"/>
+        </field-validator>
+               
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+    <field name="Strength">
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+    <field name="Weaknesses">
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+     <field name="Recommending">
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+     <field name="Grades">
+         <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Mandatory"/>
+        </field-validator>
+    </field>
+    
+    <field name="Gradesifno">
+         <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Mandatory"/>
+        </field-validator>
+        
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+     <field name="Interest">
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+     <field name="Excc">
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+   
+    <field name="Summary">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Mandatory"/>
+        </field-validator>
+        
+        <field-validator type="regex">
+        <param name="expression"><![CDATA[^[^']*$]]></param>
+        <message key="validate_appos"/>
+        </field-validator>
+    </field>
+    
+      <field name="Refname">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Refname"/>
+        </field-validator>
+    </field>
+    
+     <field name="Designation">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Designation"/>
+        </field-validator>
+    </field>
+    
+     <field name="Institute">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Institute"/>
+        </field-validator>
+    </field>
+    
+      <field name="City">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_City"/>
+        </field-validator>
+    </field>
+    
+      <field name="Pin">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Pin"/>
+        </field-validator>
+    </field>
+    
+      <field name="Telephone">
+        <field-validator type="requiredstring">
+        <param name="trim">true</param>
+            <message key="validate_Telephone"/>
+        </field-validator>
+    </field>
+		
+</validators>

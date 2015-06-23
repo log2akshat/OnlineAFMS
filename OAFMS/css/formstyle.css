@@ -1,0 +1,91 @@
+input, textarea {
+	background: #FFFFFF url(../images/img09.gif) repeat-x;
+	border: 1px solid #FFFFFF;
+	border-left-color: #D6D6D6;
+	font: normal 1em/normal "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #250517;
+}
+
+
+.label {font-style:normal; }
+.errorLabel {font-style:italic; color:red; }
+.errorMessage {font-weight:bold; color:red; }
+.checkboxLabel {}
+.checkboxErrorLabel {color:red; }
+.required {color:red;}
+.tdLabel {text-align:justify; vertical-align:top; }
+
+/* CDCFD2 ECECEC F4F2F1 F8F8FF F1EEF6 F2EEEE*/
+table.wwFormTable {
+}
+table.wwFormTable th {
+}table.wwFormTable tr td { background-color: #F4F2F1; width:945px;
+margin: 5px;
+padding: 11.5px;
+}.tdLabel {
+font-weight: normal;
+align: top;
+}
+.label { }.errorMessage { color: red;
+font-size: 0.9em;
+}
+
+table.EduTable {
+}table.EduTable th { height: 50px;
+}table.EduTable tr td { background-color: #F4F2F1; width:845px;
+margin: 5px;
+padding: 11.5px;
+}.tdLabel {
+font-weight: normal;
+align: top;
+}
+.label { }.errorMessage { color: red;
+font-size: 0.9em;
+}
+
+table.wwFormTable_1 {	
+}
+table.wwFormTable_1 th {
+}table.wwFormTable_1 tr td { background-color: #F4F2F1;
+margin: 5px;
+padding: 11.5px;
+}.tdLabel {
+font-weight: normal;
+align: top;
+}
+#wwFormTable_1:.label { }
+#wwFormTable_1:errorMessage { color: red;
+font-size: 0.9em;
+}
+
+.error_edu{
+	font-size: 16px;
+	background-color:#FFCCCC;
+	border:1px solid #CC0000;
+	width:535px;
+	height:60px;
+	margin: 15px;
+	margin-top: -35px;
+	margin-left: -120px;
+	margin-bottom:8px;
+	}
+.error_notregistered li{ 
+	list-style: none; 
+}
+
+/****************************************************Button CSS**********************************************/
+/* The Apply button */
+#submit {
+	background: url(../images/Buttons/GreyButton.png) no-repeat;
+	border: none;
+	float: right;
+	margin-left: 5px;
+	height: 31px;
+	width: 74px;
+	color: #fff;
+}
+
+#submit:hover
+  { 
+    background: url(../images/Buttons/BlueButton.png) no-repeat;
+  }

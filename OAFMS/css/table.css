@@ -1,0 +1,15 @@
+table {
+border-width: 2px;
+border-color:#DAD7D7;
+border-style: solid;
+color: #8B1A1A;
+}table th { background-color: ;
+}table tr:nth-child(even) td { background-color: #F4F1F1; 
+padding: 11px;
+}table tr:nth-child(odd) td { background-color: #EEE9E9;
+padding: 11px;
+}
+
+#mandatory {
+        width: 8000px;
+       }

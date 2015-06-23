@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<definition name="CandidateBaseLayout" template="/Tiles/CandidateBaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Tiles/Header.jsp" />
+		<put-attribute name="menu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="body" value="/Tiles/Body.jsp" />
+		<put-attribute name="footer" value="/Tiles/Footer.jsp" />
+ 	</definition>
+	
+	<definition name="404" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="..::Error 404::.." />
+  		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/error404.jsp" />
+	</definition>
+
+	<definition name="welcome" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Welcome page" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/loginsuccess.jsp" />
+	</definition>
+	
+	<definition name="Guidelines" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Guidelines for INAT" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/Instructions.jsp" />
+	</definition>
+	
+	<definition name="ApplyOnline" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Instructions to Apply INAT Online Application" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/ApplyOnline.jsp" />
+	</definition>
+	
+	<definition name="Register" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Registration for INAT Online Application" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/register/CandidateRegistration.jsp" />
+	</definition>
+	
+	<definition name="RegisterSuccess" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Registration for INAT Online Application" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/register/CandidateRegistrationSuccess.jsp" />
+	</definition>
+	
+	<definition name="Apply" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Application Form" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/application/apply.jsp" />
+	</definition>
+	
+	<definition name="ForgetPasswd" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT - Forget Password Utility" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/application/forgetPasswd.jsp" />
+	</definition>
+	
+	<definition name="OLAppForm" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Application Registration" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/application/OLAppForm.jsp" />
+	</definition>
+	
+	<definition name="AppFormSubmitSuccess" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Application Registration" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/application/OLAppFormSuccess.jsp" />
+	</definition>
+	
+	<definition name="AssessmentForm" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Assessment Form" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/referee/AssessmentForm.jsp" />
+	</definition>	
+	
+	<definition name="RefApply" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Application Form" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/referee/refapply.jsp" />
+	</definition>
+	
+	<definition name="RefereeFormSubmitSuccess" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Application - Assessment Form" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/referee/RefereeFormSuccess.jsp" />
+	</definition>
+	
+	<definition name="CandLogin" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Login" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/CandLogin.jsp" />
+	</definition>	
+	
+	<definition name="AuthCandidateBaseLayout" template="/Tiles/AuthCandidateBaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Tiles/Header.jsp" />
+		<put-attribute name="menu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="body" value="/Tiles/Body.jsp" />
+		<put-attribute name="footer" value="/Tiles/Footer.jsp" />
+ 	</definition>
+ 	
+	<definition name="CandidateAccount" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Account" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/LoginSuccess.jsp" />
+	</definition>
+	
+	<definition name="CandProfileView" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/CandProfileView.jsp" />
+	</definition>
+	
+	<definition name="CandUpdateProfile" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="Update Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/CandUpdateProfile.jsp" />
+	</definition>
+	
+	<definition name="Ref1Passwd" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="Send Password to your 1st Referee" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/Ref1Passwd.jsp" />
+	</definition>
+	
+	<definition name="Ref2Passwd" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="Send Password to your 2nd Referee" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/Ref2Passwd.jsp" />
+	</definition>
+	
+	<definition name="CandChangePasswd" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/ChangePasswd.jsp" />
+	</definition>
+	
+	<definition name="ImpDates" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Important Dates" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/Dates.jsp" />
+	</definition>
+	
+	<!-- FAQs Page -->
+	<definition name="FAQs" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="FAQs for INAT 2015" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/FAQs.jsp" />
+	</definition>
+	
+	<definition name="adminLogin" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT admin Login" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/adminLogin.jsp" />
+	</definition>
+	
+	<definition name="adminBaseLayout" template="/Tiles/adminBaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Tiles/Header.jsp" />
+		<put-attribute name="menu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="body" value="/Tiles/Body.jsp" />
+		<put-attribute name="footer" value="/Tiles/Footer.jsp" />
+ 	</definition>
+ 	
+ 		<definition name="adminBaseLayoutCandSel" template="/Tiles/adminBaseLayoutCandSel.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Tiles/Header.jsp" />
+		<put-attribute name="menu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/Menu.jsp" />
+		<put-attribute name="body" value="/Tiles/Body.jsp" />
+		<put-attribute name="footer" value="/Tiles/Footer.jsp" />
+ 	</definition>
+ 	
+ 	<!-- Bootstrap Layout [Admin] -->
+ 	<definition name="adminBaseLayoutBootstrap" template="/Tiles/bootstrap/admin/adminBaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Tiles/bootstrap/admin/Header.jsp" />
+		<put-attribute name="menu" value="/Tiles/bootstrap/admin/Menu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/bootstrap/admin/Menu.jsp" />
+		<put-attribute name="body" value="/Tiles/bootstrap/admin/Body.jsp" />
+		<put-attribute name="footer" value="/Tiles/bootstrap/admin/Footer.jsp" />
+ 	</definition>
+	
+	<definition name="adminAccount" extends="adminBaseLayoutBootstrap">
+		<put-attribute name="title" value="INAT admin Account" />
+		<put-attribute name="menu" value="/Tiles/bootstrap/admin/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles//bootstrap/admin/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/LoginSuccess.jsp" />
+	</definition>
+	
+	<!-- 
+	<definition name="adminAccount" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT admin Account" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/LoginSuccess.jsp" />
+	</definition>
+	 -->
+	 
+	<definition name="adminProfileViewLogin" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/ProfileViewLogin.jsp" />
+	</definition>
+	
+	<definition name="adminProfileUpdateLogin" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile Update" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/ProfileUpdateLogin.jsp" />
+	</definition>
+	
+	<definition name="adminCandProfileUpdate" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile Update" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/CandUpdateProfile.jsp" />
+	</definition>
+	
+	<definition name="adminCandProfileView" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/CandProfileView.jsp" />
+	</definition>
+	
+	<definition name="OFDRRedirect" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/OFDRRedirect.jsp" />
+	</definition>
+	
+	<definition name="RefereeProfileLogin" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Referee Report" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/RefereeProfileLogin.jsp" />
+	</definition>
+	
+	<definition name="RefereeProfileView" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/RefereeProfileView.jsp" />
+	</definition>
+	
+	<definition name="SendAppPasswd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Applicant Password" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/password/SendAppPasswd.jsp" />
+	</definition>
+	
+	<definition name="PreviewAppPasswd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Applicant Password" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/password/PreviewAppPasswd.jsp" />
+	</definition>
+	
+	<definition name="SendRef1Passwd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Password to 1st Referee" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/password/SendRef1Passwd.jsp" />
+	</definition>
+	
+	<definition name="PreviewRef1Passwd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Password to 1st Referee" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/password/PreviewRef1Passwd.jsp" />
+	</definition>
+	
+	<definition name="SendRef2Passwd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Password to 2nd Referee" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/password/SendRef2Passwd.jsp" />
+	</definition>
+	
+	<definition name="PreviewRef2Passwd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Password to 2nd Referee" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/password/PreviewRef2Passwd.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Combined Candidate Profile Preview -->
+	<definition name="CandCombProfile" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Combined Candidate Profile Preview" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/CandCombReport.jsp" />
+	</definition>
+	
+	<definition name="MultiSelRedirect" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/controllerjsps/multiselect.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Combined Referee Profile Preview -->
+	<definition name="RefCombProfile" extends="adminBaseLayout">
+		<put-attribute name="title" value="Combined Referee Profile Preview" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/RefCombReport.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Combined Candidate Profile Preview -->
+	<definition name="CandSelProfile" extends="adminBaseLayoutCandSel">
+		<put-attribute name="title" value="Combined Candidate Selection Profile" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/CandSelReport.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Selected Candidates List -->
+	<definition name="SelectedCandidates" extends="adminBaseLayout">
+		<put-attribute name="title" value="List of Selected Candidates" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/SelectedCandidates.jsp" />
+	</definition>
+	
+	<!-- Admin Section Selected Redirect -->
+	<definition name="SelectedRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/redirect/SelectedRedirect.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Waiting Candidates List -->
+	<definition name="WaitingCandidates" extends="adminBaseLayout">
+		<put-attribute name="title" value="List of Waiting Candidates" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/WaitingCandidates.jsp" />
+	</definition>
+	
+	<!-- Admin Section Waiting Redirect -->
+	<definition name="WaitingRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/redirect/WaitingRedirect.jsp" />
+	</definition>
+	
+	<!-- Admin Section Reject Redirect -->
+	<definition name="RejectRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/redirect/RejectRedirect.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Rejected Candidates List -->
+	<definition name="RejectedCandidates" extends="adminBaseLayout">
+		<put-attribute name="title" value="List of Rejected Candidates" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/RejectedCandidates.jsp" />
+	</definition>
+	
+	<!-- Admin Section :Data in Excel Format -->
+	<definition name="ExcelFormat" extends="adminBaseLayout">
+		<put-attribute name="title" value="Data in Excel Format" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/Excel.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Screening Committee Invitation -->
+	<definition name="SCInvitation" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Screening Committee Invitation" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCInvitation.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Password Sending Mechanism | Password to Screening Committee Member -->
+	<definition name="SendSCPasswd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Password to Screening Committee Member" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SendSCPasswd.jsp" />
+	</definition>
+	
+	<definition name="PreviewSCPasswd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Send Password to Screening Committee Member" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/PreviewSCPasswd.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Password Sending Mechanism | Password to Screening Committee Member -->
+	<definition name="SCProfileAccess" extends="adminBaseLayout">
+		<put-attribute name="title" value="View Profile of Screening Committee Member" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCProfileAccess.jsp" />
+	</definition>
+	
+	<!-- Admin Section : View Profile of Screening Committee Member -->
+	<definition name="SCProfile" extends="adminBaseLayout">
+		<put-attribute name="title" value="View Profile of Screening Committee Member" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCProfile.jsp" />
+	</definition>
+	
+	<!-- Screening Committee | Update Profile of Screening Committee Member -->
+	<definition name="SCProfileUpdateAccess" extends="adminBaseLayout">
+		<put-attribute name="title" value="Update Profile of Screening Committee Member" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCProfileUpdateAccess.jsp" />
+	</definition>
+	
+	<!-- Admin Section : View Profile of Screening Committee Member -->
+	<definition name="SCProfileUpdateProcess" extends="adminBaseLayout">
+		<put-attribute name="title" value="View Profile of Screening Committee Member" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCProfileUpdate.jsp" />
+	</definition>
+		
+	<!-- Admin Section SC Member Profile Redirect -->
+	<definition name="SCProfileRedirect" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT SC Member Profile" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCProfileRedirect.jsp" />
+	</definition>
+	
+	<!-- Admin Section : List of Screening Committee Members -->
+	<definition name="SCommittee" extends="adminBaseLayout">
+		<put-attribute name="title" value="List of Screening Committee Members " />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/committee/SCommittee.jsp" />
+	</definition>
+	
+	<!-- admin Password Changing Page -->
+	<definition name="adminChangePasswd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/adminChangePasswd.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Print Call Letters Selected Candidates -->
+	<definition name="CallLetters" extends="adminBaseLayout">
+		<put-attribute name="title" value="Print Call Letters Selected Candidates" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/CallLetters.jsp" />
+	</definition>
+	
+	<!-- Admin Section Call Letters Redirect -->
+	<definition name="CallLettersRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/redirect/CallLettersRedirect.jsp" />
+	</definition>
+	
+	<!-- Admin Section : Zero Referee Reports Received of the Candidates -->
+	<definition name="ZeroReport" extends="adminBaseLayout">
+		<put-attribute name="title" value="Zero Referee Reports Received of the Candidates" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/ZeroReport.jsp" />
+	</definition>
+	
+	<!-- Admin Section Zero Reports Redirect -->
+	<definition name="ZeroReportRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/redirect/ZeroReportRedirect.jsp" />
+	</definition>
+	
+	<!-- Admin Section : One Referee Report Received of the Candidates -->
+	<definition name="OneReport" extends="adminBaseLayout">
+		<put-attribute name="title" value="One Referee Report Received of the Candidates" />
+		<put-attribute name="menu" value="/Tiles/adminMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/adminsubMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/login/OneReport.jsp" />
+	</definition>
+	
+	
+	<!-- Screening Committee Section Begins -->
+	<definition name="SCLogin" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Screening Committee Login" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/SCLogin.jsp" />
+	</definition>
+	 	
+	<!-- Screening Committee Account Statistics -->
+	<definition name="SCAccount" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Screening Committee Account" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/LoginSuccess.jsp" />
+	</definition>
+	
+		<!-- Screening Committee Candidate Profile View Login -->
+	<definition name="SCProfileViewLogin" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/ProfileViewLogin.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Candidate Profile View -->
+	<definition name="SCCandProfileView" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/CandProfileView.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Candidate Profile Redirect -->
+	<definition name="SCOFDRRedirect" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/OFDRRedirect.jsp" />
+	</definition>
+	
+		<!-- Screening Committee AFDR Login -->
+	<definition name="SCRefereeProfileLogin" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Referee Report" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/RefereeProfileLogin.jsp" />
+	</definition>
+	
+	<!-- Screening Committee AFDR -->
+	<definition name="SCRefereeProfileView" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Candidate Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/RefereeProfileView.jsp" />
+	</definition>
+	
+	<!-- Screening Committee : Screening Committee Combined Candidate Profile Preview -->
+	<definition name="SCCandSelProfile" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Combined Candidate Selection Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/CandSelReport.jsp" />
+	</definition>
+	
+	<!-- Screening Committee :Screening Committee Combined Candidate Profile Preview -->
+	<definition name="SCCandCombProfile" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Combined Candidate Profile Preview" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/CandCombReport.jsp" />
+	</definition>
+	
+	<!-- Screening Committee : Screening Committee Combined Referee Profile Preview -->
+	<definition name="SCRefCombProfile" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT Combined Referee Profile Preview" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/RefCombReport.jsp" />
+	</definition>
+	
+	<!-- Screening Committee : Screening Committee Selected Candidates List -->
+	<definition name="SCSelectedCandidates" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT List of Selected Candidates" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/SelectedCandidates.jsp" />
+	</definition>
+	
+	<!-- Screening Committee : Screening Committee Waiting Candidates List -->
+	<definition name="SCWaitingCandidates" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT List of Waiting Candidates" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/WaitingCandidates.jsp" />
+	</definition>
+	
+	<!--Screening Committee Waiting Redirect -->
+	<definition name="SCWaitingRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/redirect/WaitingRedirect.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Selected Redirect -->
+	<definition name="SCSelectedRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/redirect/SelectedRedirect.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Reject Redirect -->
+	<definition name="SCRejectRedirect" extends="adminBaseLayout">
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/redirect/RejectRedirect.jsp" />
+	</definition>
+	
+	<!-- Screening Committee : Rejected Candidates List -->
+	<definition name="SCRejectedCandidates" extends="adminBaseLayout">
+		<put-attribute name="title" value="INAT List of Rejected Candidates" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/RejectedCandidates.jsp" />
+	</definition>
+	
+	<!-- Screening Committee Password Changing Page -->
+	<definition name="SComChangePasswd" extends="adminBaseLayout">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/SCMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/admin/sclogin/SCChangePasswd.jsp" />
+	</definition>
+	
+	
+												<!-- REGISTRATION OVER SPECIFIC PAGES -->
+												
+		<!-- AFTER THE DEADLINE : Online Apply Page -->
+	<definition name="Deadline" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Application Form" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/application/Deadline.jsp" />
+	</definition>
+	
+	<!-- Candidate Update Profile -->
+	<definition name="CandDeadline" extends="AuthCandidateBaseLayout">
+		<put-attribute name="title" value="Update Profile" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="submenu" value="/Tiles/CandMenu.jsp" />	
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/login/CandDeadline.jsp" />
+	</definition>
+	
+	<!-- Apply Online Page -->
+	<definition name="RegOver" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Instructions to Apply INAT Online Application" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/register/RegOver.jsp" />
+	</definition>
+	
+	<!-- Online Assessment Form Login -->
+	<definition name="RefApplyOver" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="INAT Online Assessment Form" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/candidate/referee/RefApplyOver.jsp" />
+	</definition>
+	
+	<definition name="download" extends="CandidateBaseLayout">
+		<put-attribute name="title" value="Download Admit Card" />
+		<put-attribute name="menu" value="/Tiles/candidateMenu.jsp" />
+		<put-attribute name="body" value="/pagesfcd684a6005043f00affad06ba8c67524e26e85745254/df6s2d7j9.jsp" />
+	</definition>
+	
+</tiles-definitions>

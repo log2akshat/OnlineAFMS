@@ -1,0 +1,234 @@
+# Name of the Applicant.
+msgid "Name"
+msgstr "Please Enter your Name."
+
+# Surname of the Applicant.
+msgid "Surname"
+msgstr "Please Enter your Surname."
+
+# DOB of the Applicant.
+msgid "DOB"
+msgstr "Please select your date of birth."
+
+# Gender of the Applicant.
+msgid "Gender"
+msgstr "Please Select your Gender"
+
+# Nationality of the Applicant.
+msgid "Nationality"
+msgstr "Please Enter your Nationality."
+
+# Correspondance address of the Applicant.
+msgid "CAddress"
+msgstr "Please Enter your Correspondance address."
+
+# Correspondance address pincode of the Applicant.
+msgid "CPin"
+msgstr "Please Enter your Correspondance address Pincode."
+
+# Correspondance address city of the Applicant.
+msgid "CCity"
+msgstr "Please select your Correspondance address City."
+
+# Correspondance address state of the Applicant.
+msgid "CState"
+msgstr "Please select your Correspondance address State."
+
+# Telephone of the Applicant.
+msgid "Telephone"
+msgstr "Please Enter your contact number."
+
+# Permanent address of the Applicant.
+msgid "PAddress"
+msgstr "Please Enter your Institute address."
+
+# Permanent address pincode of the Applicant.
+msgid "PPin"
+msgstr "Please Enter your Institute address Pincode."
+
+# Permanent address city of the Applicant.
+msgid "PCity"
+msgstr "Please select your Institute address City."
+
+# Permanent address state of the Applicant.
+msgid "PState"
+msgstr "Please select your Institute address State."
+
+# Category of the Applicant.
+msgid "Category"
+msgstr "Please select your Category."
+
+# Referee1 of the Applicant.
+msgid "Referee1"
+msgstr "Please Enter your first Referee details."
+
+# Referee1 Email of the Applicant.
+msgid "Referee1Email"
+msgstr "Please Enter your first Referee E-mailID."
+
+msgid "Referee1EmailConfirm"
+msgstr "Please Confirm your first Referee E-mailID."
+
+# Referee2 of the Applicant.
+msgid "Referee2"
+msgstr "Please Enter your second Referee details."
+
+# Referee2 Email of the Applicant.
+msgid "Referee2Email"
+msgstr "Please Enter your second Referee E-mailID."
+
+msgid "Referee2EmailConfirm"
+msgstr "Please Confirm your second Referee E-mailID."
+
+# Validation of E-mail IDs.
+msgid "SameMailID"
+msgstr "Applicant's E-mail ID and Referee E-mail ID cannot be same."
+
+msgid "SameRefereeMailID"
+msgstr "Both Referees E-mail ID cannot be same."
+
+msgid "PresentInterest"
+msgstr "Please select you are presently interested in."
+
+msgid "SubjectInterest"
+msgstr "What makes you interested in Astronomy/Astrophysics."
+
+#...................:: Educational Field Messages ::....................
+
+msgid "EducationMessages"
+msgstr "REQUIRED Fields in Point No.10 are Missing, Please check before submitting:"
+
+msgid "XthInstitute"
+msgstr "* Please Enter your Xth Standard Institute."
+
+msgid "XthBoard"
+msgstr "* Please Enter your Xth Standard Board."
+
+msgid "XthYear"
+msgstr "* Please Enter your Xth Standard passing yea.r"
+
+msgid "XthPc"
+msgstr "* Please Enter your Xth Standard percentage of marks."
+
+msgid "XIIthInstitute"
+msgstr "* Please Enter your XIIth Standard Institute."
+
+msgid "XIIthBoard"
+msgstr "* Please Enter your XIIth Standard Board."
+
+msgid "XIIthYear"
+msgstr "* Please Enter your XIIth Standard passing year."
+
+msgid "XIIthPc"
+msgstr "* Please Enter your XIIth Standard percentage of marks."
+
+msgid "UGDegree"
+msgstr "* Please select your Under-graduation Degree."
+
+msgid "UGInstitute"
+msgstr "* Please Enter your Under-graduation Institute."
+
+msgid "UGBoard"
+msgstr "* Please Enter your Under-graduation Board."
+
+msgid "UGYear"
+msgstr "* Please Enter your Under-graduation passing year."
+
+msgid "UGPc"
+msgstr "* Please Enter your Under-graduation percentage of marks."
+
+# Single Quote Error Messages
+msgid "Reason"
+msgstr "Error in point No.:14."
+
+msgid "Appliedbefore2"
+msgstr "Error in point No.:15. b."
+
+msgid "Subject"
+msgstr "Error in point No.:17."
+
+msgid "Project"
+msgstr "Error in point No.:18."
+
+msgid "Awards"
+msgstr "Error in point No.:19."
+
+msgid "Result"
+msgstr "Error in point No.:20."
+
+msgid "SingleQuoteError"
+msgstr "Single Quotes '  is NOT ALLOWED"
+
+msgid "SingleQuoteErrorMsg"
+msgstr "The textarea will be cleared please enter your details again without using Single Quotes ' Sign"
+
+# Word Limit Restrication Messages
+msgid "Error"
+msgstr "..:: ERROR ::.."
+
+msgid "20WordsLimit"
+msgstr "You have exceeded the maximum limit of 20 words!"
+
+msgid "50WordsLimit"
+msgstr "You have exceeded the maximum limit of 50 words!"
+
+msgid "100WordsLimit"
+msgstr "You have exceeded the maximum limit of 100 words!"
+
+msgid "150WordsLimit"
+msgstr "You have exceeded the maximum limit of 150 words!"
+
+msgid "500WordsLimit"
+msgstr "You have exceeded the maximum limit of 500 words!"
+
+msgid "1000WordsLimit"
+msgstr "You have exceeded the maximum limit of 1000 words!"
+
+msgid "4KCharactersLimit"
+msgstr "You have exceeded the maximum limit of 4000 characters!"
+
+msgid "6KCharactersLimit"
+msgstr "You have exceeded the maximum limit of 6000 characters!"
+
+msgid "9KCharactersLimit"
+msgstr "You have exceeded the maximum limit of 9000 characters!"
+
+msgid "Trim"
+msgstr "Please trim your description within words limit only."
+
+msgid "TrimClear"
+msgstr "The textarea will be cleared please trim your description within words limit only."
+
+# Added on 29th October 2014 - akshat
+msgid "PercentageValidation"
+msgstr "Percentage should be between 30% to 100%"
+
+msgid "XthPercentage"
+msgstr "Please enter valid percentage as your Xth standard percentage."
+
+msgid "XIIthPercentage"
+msgstr "Please enter valid percentage as your XIIth standard percentage."
+
+msgid "UGPercentage"
+msgstr "Please enter valid percentage as your under-graduate percentage."
+
+msgid "XthYearError"
+msgstr "Please enter valid year of passing Xth standard."
+
+msgid "XIIthYearError"
+msgstr "Please enter valid year of passing XIIth standard."
+
+msgid "UGYearError"
+msgstr "Please enter valid year of passing under-graduate course."
+
+msgid "CorrectIt"
+msgstr "Please correct it."
+
+msgid "Ref1IncorrectID"
+msgstr "You have entered incorrect address of 1st Referee!"
+
+msgid "Ref2IncorrectID"
+msgstr "You have entered incorrect address of 2nd Referee!"
+
+msgid "validMailID"
+msgstr "Please Enter a valid E-mail ID!!"
